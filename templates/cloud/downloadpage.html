@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+-->
+<html>
+	<head>
+		<title>MJ Cloud Upload Section</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static "css/main.css" %}" />
+		<link rel="stylesheet" href="{% static "css/bootstrap1.min.css" %}">
+    <script src="{% static "js/jquery1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" style="background:url('{% static "images/cloud.jpg" %}");'">
+				<div class="inner">
+                    <a href="/downloadpage/" class="logo"><strong>Welcome to your drive, {{ name }}.</strong></a>
+					<nav id="nav">
+						<a href="/homepage/">Home</a>
+						<a href="generic.html">Upgrade Storage Limit</a>
+						<a href="/login/">Log Out</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="{% static "fa fa-bars" %}"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner" style="height: 350px; background:url('{% static "images/cloud.jpg" %}");'">
+				<div class="inner">
+					<header>
+						<b><h1 style="font-size:50px; font-family:georgia;">VIEW / DOWNLOAD</h1></b>
+					</header>
+					<div class="flex">
+					</div>
+				</div>
+			</section>
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2" style="margin-left: 30px">
+						<article>
+							<div class="image round">
+								<img src="{% static "images/pic01.jpg" %}" alt="Pic 01" style="height:150px; width:150px">
+							</div>
+							<header>
+								<h3>Audio</h3>
+							<footer>
+								<a href="/audioview/" class="button">View / Download</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image round">
+								<img src="{% static "images/pic02.jpg" %}" alt="Pic 02" style="height:150px; width:150px" />
+							</div>
+							<header>
+								<h3>Photo</h3>
+							</header>
+							<footer>
+								<a href="/photoview/" class="button">View / Download</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+
+		<!-- Three -->
+			<section id="three" class="wrapper align-center">
+				<div class="inner">
+					<div class="flex flex-2" style="margin-left: 30px">
+						<article>
+							<div class="image round">
+								<img src="{% static "images/pic03.jpg" %}" alt="Pic 03" style="height:150px; width:150px" />
+							</div>
+							<header>
+								<h3>Video</h3>
+							<footer>
+								<a href="/videoview/" class="button">View / Download</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image round">
+								<img src="{% static "images/pic04.jpg" %}" alt="Pic 04" style="height:150px; width:150px" />
+							</div>
+							<header>
+								<h3>File</h3>
+							<footer>
+								<a href="/fileview/" class="button">View / Download</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Get in touch</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; Designed and Developed by: Mahaan Jain. All Rights Reserved.<br></a>
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static "js/jquery.min.js" %}"></script>
+			<script src="{% static "js/skel.min.js" %}"></script>
+			<script src="{% static "js/util.js" %}"></script>
+			<script src="{% static "js/main.js" %}"></script>
+
+	</body>
+</html>

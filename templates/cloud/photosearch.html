@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+-->
+<html>
+	<head>
+		<title>Photo Search</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static "css/main.css" %}" />
+		<link rel="stylesheet" href="{% static "css/bootstrap1.min.css" %}" />
+    <script src="{% static "js/jquery1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header" style="background:url('{% static "images/cloud.jpg" %}");'">
+				<div class="inner">
+                    <a href="/homepage/" class="logo"><strong><i>Search your stored photos..</i></strong></a>
+					<nav id="nav">
+						<a href="/homepage/">Home</a>
+						<a href="generic.html">Upgrade Storage Limit</a>
+						<a href="/logout/">Log Out</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner" style="height: 350px; align-items:center; background:url('{% static "images/cloud.jpg" %}");'">
+				<div class="inner">
+					<header>
+						<h1 style="font-size:50px; font-family:georgia; ">PHOTO</h1></b>
+                        <form method="POST" style="text-align: center;" style="background-color: red;">
+                        {% csrf_token %}
+                        </form>
+					</header>
+					<div class="flex">
+					</div>
+				</div>
+			</section>
+			<section id="three" class="wrapper align-center">
+			<center>
+				<div class="outer">
+					<div class="flex flex-1">
+						<article style="margin-left:6%">
+							<div class="image round" style="margin-top: -75px">
+								<img src="{% static "images/pic02.jpg" %}" alt="Pic 02" style="height:150px; width:150px; margin-left: 370%;" >
+								<br><br>
+                        </article>
+	  		<table style=" width:100%">
+                          <tr>
+                            <td width="400px"> Name : {{ f.name }}</td>
+                            <td width="50px" style="text-align:right"> Actions</td>
+                            <td width="50px"></td></td>
+                            <td width=""></td>
+                          </tr>
+                          <tr>
+                            <td width="400px"> Description : {{ f.description }}</td>
+                            <a href="{% static "../media/" %}{{ f.browse }}" download="{{ f.name }}"><td width="25px"><button class="btn" style="border-radius: 20px;"><span class="fa fa-download"></span> Download</button></td></a>
+                            <td width="25px" style="text-align: center;"><a href="/photodelete/{{ f.id }}/"><button class="btn"  style="vertical-align: center; border-radius: 20px" type="button"><span class="fa fa-bitbucket"></span> Delete</button></td></td></a>
+                            <td width=""></td>
+                          </tr>
+                          <tr>
+                            <td><img controls src="{% static "../media/" %}{{ f.browse }}" alt="photo" class="img-responsive" style="width:400px;"></img></td>
+                            <td width="50px"></td></td>
+                            <td width="50px"></td></td>
+                            <td width=""></td>
+                          </tr>
+                    </table>
+	  	</div>
+							</div>
+							</header>
+						</article>
+						<article>
+							<div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</center>
+			</section>
+
+		<!-- Three -->
+			</section>
+			<section id="three" class="wrapper">
+				<div class="outer">
+					<div>
+						<article>
+							<div>
+							</div>
+							<header>
+							<footer>
+							</footer>
+						</article>
+						<article>
+							<div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Get in touch</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; Designed and Developed by: Mahaan Jain. All Rights Reserved.<br></a>
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static "js/jquery.min.js" %}"></script>
+			<script src="{% static "js/skel.min.js" %}"></script>
+			<script src="{% static "js/util.js" %}"></script>
+			<script src="{% static "js/main.js" %}"></script>
+		</form>
+	</body>
+</html>

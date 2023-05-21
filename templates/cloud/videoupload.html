@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE HTML>
+    <html>
+	<head>
+		<title>Video Upload</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{% static "css/main.css" %}" />
+		<link rel="stylesheet" href="{% static "css/bootstrap1.min.css" %}" />
+    <script src="{% static "js/jquery1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header" style="background:url('{% static "images/cloud.jpg" %}");'">
+				<div class="inner">
+					<a href="homepage/" class="logo"><strong><i>Upload your video files here.</strong></a></i>
+					<nav id="nav">
+						<a href="/homepage/">Home</a>
+						<a href="generic.html">Upgrade Storage Limit</a>
+						<a href="/logout/">Log Out</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner" style="height: 350px; align-items:center; background:url('{% static "images/cloud.jpg" %}");'">
+				<div class="inner">
+					<header>
+						<b><h1 style="font-size:50px; font-family:georgia;">VIDEO</h1></b>
+					</header>
+					<div class="flex">
+					</div>
+				</div>
+			</section>
+			<section id="three" class="wrapper align-center">
+			<center>
+            <form method="post" style="text-align: center;" action="/addvideo/" enctype="multipart/form-data">
+                {% csrf_token %}
+				<div class="outer">
+					<div class="flex flex-1">
+						<article style="margin-left: 35%">
+							<div class="image round">
+								<img src="{% static "images/pic03.jpg" %}" alt="Pic 03" style="height:150px; width:150px; margin-left:30%" >
+								<br>
+								<table>
+	  								<tr>
+	  									<th>Video Name :</th>
+	  										<td><input type="text" name="name" class="form-control"></td>
+	  								</tr>
+	  								<tr></tr>
+
+	  								<tr>
+	  									<th>Description :</th>
+	  										<td><input type="text" name="description" class="form-control"></td>
+	  								</tr>
+	  								<tr></tr>
+
+	  								<tr>
+	  									<th>Browse Video Clip :</th>
+	  										<td><input type="file" name="browse"></td>
+	  								</tr>
+	  								<tr></tr>
+
+	  								<tr>
+                        					<td colspan="2" align="center">
+                            				<input type="submit" name="submit" class="btn btn-success" value="submit">
+                        					</td>
+                    				</tr>
+                   					<tr></tr>
+                   				</table>
+							</div>
+							<header>
+						</article>
+						<article>
+							<div>
+							</div>
+						</article>
+					</div>
+				</div>
+            </form>
+			</center>
+			</section>
+
+		<!-- Three -->
+			</section>
+			<section id="three" class="wrapper">
+				<div class="outer">
+					<div>
+						<article>
+							<div>
+							</div>
+							<header>
+							<footer>
+							</footer>
+						</article>
+						<article>
+							<div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<h3>Get in touch</h3>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+					<div class="copyright">
+						&copy; Designed and Developed by: Mahaan Jain. All Rights Reserved.<br></a>
+					</div>
+
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static "js/jquery.min.js" %}"></script>
+			<script src="{% static "js/skel.min.js" %}"></script>
+			<script src="{% static "js/util.js" %}"></script>
+			<script src="{% static "js/main.js" %}"></script>
+		</form>
+	</body>
+</html>
